@@ -4,6 +4,7 @@ let convertedVowels = ['enter', 'imes', 'ai', 'ober', 'ufat'];
 let phrase = 'oi eu sou o andre';
 let newPhrase = [''];
 let expectedPhrase = 'oberimes enterufat soberufat ober aindrenter';
+let expectedPhrase2 = 'oi eu sou o andre';
 
 function encryptPhrase(params) {
     params = phrase;
@@ -33,8 +34,31 @@ function encryptPhrase(params) {
         }
     }
 
-    console.log('       Minha frase: ' + newPhrase);
+    console.log('       Minha frase: ' + params);
+    console.log('  Frase Encriptada: ' + newPhrase);
     console.log('Resultado esperado: ' + expectedPhrase);
+}
+
+function decryptPhrase(params) {
+    params = expectedPhrase;
+
+    let newPhrase = decryptVowels(params);
+
+    console.log('       Minha frase: ' + expectedPhrase);
+    console.log(' Frase Descriptada: ' + newPhrase);
+    console.log('Resultado esperado: ' + phrase);
+}
+
+function decryptVowels(params) {
+    let newPhrase = params;
+
+    for (let index = 0; index < convertedVowels.length; index++) {
+        const regex = new RegExp(convertedVowels[index], 'g'); // Criando a expressão regular
+
+        newPhrase = newPhrase.replace(regex, vowels[index]);
+    }
+
+    return newPhrase;
 }
 
 function verifyVowel(phrase, index) {
@@ -65,7 +89,7 @@ function criptographVowel(phrase, index) {
     let value = phrase[index];
 
     let valueVowels = vowels.findIndex(element => element === value);
-   
+
     newPhrase[0] = newPhrase[0] + convertedVowels[valueVowels];
 
     return;
@@ -82,3 +106,5 @@ function criptographConsonant(phrase, index) {
 }
 
 encryptPhrase(phrase);
+console.log();
+decryptPhrase(expectedPhrase);
