@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3F5FC;
+    font-family: 'Inter', Courier, monospace;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    border: 1px solid blue;
+    height: 99.7vh;
+}
+
+.logo {
+    border: 1px solid red;
+    margin: 0 0 35% 5%;
+}
+
+.container-encodingForm {
+    height: 95%;
+}
+
+#encodingForm {
+    margin: 3rem;
+    padding: 2rem;
+}
+
+#encodedText {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #0A3871;
+    resize: none;
+}
+
+#encodedText::placeholder {
+    color: #0A3871;
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 8rem 1rem 1rem 1rem;
+}
+
+.disclaimer img {
+    margin: 0.25rem 1rem 0 1rem;
+}
+
+.disclaimer p {
+    color: #45565F;
+}
+
+.blue {
+    width: 15rem;
+    height: 3rem;
+    background-color: #0A3871;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    margin-right: 1rem;
+}
+
+
+.neutral {
+    width: 15rem;
+    height: 3rem;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+}
+
+.neutralcopy {
+    width: 15rem;
+    height: 3rem;
+    background-color: #ffffff;
+    color: #0A3871;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+}
+
+.container-dencodingForm {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    background-color: white;
+    border-radius: 1rem;
+    gap: 1rem;
+    width: 20rem;
+}
+
+.container-dencodingForm-final{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem;
+    background-color: white;
+    border-radius: 1rem;
+    width: 20rem;
+    padding: 2rem;
+    box-shadow: 3px 3px 5px blur black;
+}
+
+.container-dencodingForm-final p{
+    padding-left: 2.5rem;
+    color:#495057;
+}
+
+.container-dencodingForm img {
+    height: 40%;
+}
+
+.container-dencodingForm p {
+    padding-left: 2.3rem;
+}

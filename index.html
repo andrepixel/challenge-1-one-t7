@@ -6,25 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Decodificador de Texto</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section>
-        <form id="decodingForm">
-            <input placeholder="Digite aqui o seu texto" type="text" id="encodedText" required>
-            <br><br><br>
-            <button type="submit">Codificar</button>
-            <button type="submit">Decodificar</button>
-        </form>
-        <br><br><br>
-        <section id="decodedText">
-            <form id="decodingForm">
-                <input value="" type="text" id="dencodedText" required>
-                <br><br><br>
-                <button type="submit">Copiar</button>
+    <main class="main">
+        <figure class="logo">
+            <img src="assets/images/logo.png" alt="logo alura challenge one t7">
+        </figure>
+
+        <section class="container-encodingForm">
+            <form id="encodingForm">
+                <textarea placeholder="Digite aqui o seu texto" id="encodedText" cols="35" rows="9"></textarea>
+                <section class="disclaimer">
+                    <figure>
+                        <img src="assets/images/atencao.png" alt="atenção">
+                    </figure>
+                    <span><p>Apenas letras minúsculas e sem acento.</p></span>
+                </section>
+                <button class="blue" type="submit">Codificar</button>
+                <button class="neutral" type="submit">Decodificar</button>
             </form>
         </section>
-    </section>
+
+        <!-- <section class="container-dencodingForm">
+            <img src="assets/images/image-text.png" alt="" srcset="">
+            <h4>Nenhuma mensagem encontrada</h4> 
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </section> -->
+
+        <section class="container-dencodingForm-final">
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <button class="neutralcopy" type="submit">Copiar</button>
+        </section>
+    </main>
+
 </body>
 
 </html>
