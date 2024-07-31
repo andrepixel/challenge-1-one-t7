@@ -7,7 +7,9 @@ let expectedPhrase = 'oberimes enterufat soberufat ober aindrenter';
 let expectedPhrase2 = 'oi eu sou o andre';
 
 function encryptPhrase(params) {
-    params = phrase;
+    
+
+
 
     params = params.toLocaleLowerCase();
 
@@ -40,6 +42,12 @@ function encryptPhrase(params) {
 }
 
 function decryptPhrase(params) {
+    // let text = navigator.clipboard
+    // .readText()
+    // .then(
+    //   (clipText) => (document.querySelector(".encodedText").innerText += clipText),
+    // );
+
     params = expectedPhrase;
 
     let newPhrase = decryptVowels(params);
