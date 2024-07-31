@@ -131,3 +131,7 @@ body {
 .container-dencodingForm p {
     padding-left: 2.3rem;
 }
+
+#mytext {
+    font-size: 2rem;
+}

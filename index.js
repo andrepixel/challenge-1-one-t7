@@ -1,60 +1,97 @@
 let vowels = ['e', 'i', 'a', 'o', 'u'];
 let convertedVowels = ['enter', 'imes', 'ai', 'ober', 'ufat'];
 
-let phrase = 'oi eu sou o andre';
 let newPhrase = [''];
 let expectedPhrase = 'oberimes enterufat soberufat ober aindrenter';
 let expectedPhrase2 = 'oi eu sou o andre';
 
-function encryptPhrase(params) {
+getEventText() 
+
+function getEventText() {
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('encryptSubmit').addEventListener('click', function(e) {
+            e.preventDefault();
     
+            let textForm = document.getElementById('encodedText').value;
+            console.log(textForm.length);
+    
+            if (textForm.length != 0) {
+                let phraseEncrypt = encryptPhrase(textForm);
+    
+                sendTextToDisplay(phraseEncrypt);
+            }
+        });
 
+        document.getElementById('descryptSubmit').addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            let textForm = document.getElementById('encodedText').value;
+            console.log(textForm.length);
+    
+            if (textForm.length != 0) {
+                let phraseDescrypt = decryptPhrase(textForm);
+    
+                sendTextToDisplay(phraseDescrypt);
+            }
+        });
+    });
 
+    document.getElementById('encryptSubmit').addEventListener('click', () => true);
 
-    params = params.toLocaleLowerCase();
+}
 
-    for (let i = 0; i < params.length; i++) {
+function encryptPhrase(phrase) {
+    phrase = phrase.toLocaleLowerCase();
+
+    for (let i = 0; i < phrase.length; i++) {
         let isVowel = verifyVowel(phrase, i);
 
         if (isVowel) {
-            criptographVowel(params, i);
+            criptographVowel(phrase, i);
             continue;
         }
 
         let isSpace = verifySpace(phrase, i);
 
         if (isSpace) {
-            criptographSpace(params, i);
+            criptographSpace(phrase, i);
             continue;
         }
 
         let isConsonant = verifyConsonant(phrase, i);
 
         if (isConsonant) {
-            criptographConsonant(params, i);
+            criptographConsonant(phrase, i);
             continue;
         }
     }
 
-    console.log('       Minha frase: ' + params);
+    // Minha frase: ei ia ao ou uu
+    // Frase Encriptada: enter imes ai ober ufatenterimes imesai aiober oberufat ufatufat
+
+    console.log('       Minha frase: ' + phrase);
     console.log('  Frase Encriptada: ' + newPhrase);
-    console.log('Resultado esperado: ' + expectedPhrase);
+
+   return newPhrase;
 }
 
-function decryptPhrase(params) {
+function sendTextToDisplay(phrase) {
+    document.getElementById("mytext").innerText = phrase;
+}
+
+function decryptPhrase(phrase) {
     // let text = navigator.clipboard
     // .readText()
     // .then(
     //   (clipText) => (document.querySelector(".encodedText").innerText += clipText),
     // );
 
-    params = expectedPhrase;
-
-    let newPhrase = decryptVowels(params);
+    let newPhrase = decryptVowels(phrase);
 
     console.log('       Minha frase: ' + expectedPhrase);
     console.log(' Frase Descriptada: ' + newPhrase);
-    console.log('Resultado esperado: ' + phrase);
+    
+    return newPhrase;
 }
 
 function decryptVowels(params) {
@@ -112,7 +149,3 @@ function criptographConsonant(phrase, index) {
 
     return;
 }
-
-encryptPhrase(phrase);
-console.log();
-decryptPhrase(expectedPhrase);
