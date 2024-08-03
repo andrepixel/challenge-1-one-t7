@@ -19,16 +19,15 @@ body {
 }
 
 .logo {
-    border: 1px solid red;
     margin: 0 0 35% 5%;
 }
 
 .container-encodingForm {
     height: 95%;
+    margin: 0 0 0 8rem;
 }
 
 #encodingForm {
-    margin: 3rem;
 }
 
 #encodedText {
@@ -37,10 +36,15 @@ body {
     font-size: 1.5rem;
     color: #0A3871;
     resize: none;
+    margin-top: 7rem;
 }
 
 #encodedText::placeholder {
     color: #0A3871;
+}
+
+textarea:focus {
+    outline: none;
 }
 
 .disclaimer {
@@ -48,7 +52,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin: 8rem 1rem 1rem 0;
+    margin: 4rem 1rem 1rem 0;
 }
 
 .disclaimer img {
@@ -71,7 +75,6 @@ body {
     margin-right: 1rem;
 }
 
-
 .neutral {
     width: 15rem;
     height: 3rem;
@@ -93,34 +96,36 @@ body {
 }
 
 .container-dencodingForm {
-    height: 95%;
+    gap: 1rem;
+    height: 31rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3rem;
+    margin: 1rem 5rem;
     background-color: white;
     border-radius: 1rem;
-    gap: 1rem;
     width: 20rem;
+    padding: 2rem 3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .container-dencodingForm-final{
-    height: 85%;
+    height: 31rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 3rem;
+    margin: 1rem 5rem;
     background-color: white;
     border-radius: 1rem;
     width: 20rem;
-    padding: 2rem;
-    box-shadow: 3px 3px 5px blur black;
+    padding: 2rem 3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
 .container-dencodingForm-final p{
-    padding-left: 2.5rem;
     color:#495057;
 }
 
@@ -135,3 +140,4 @@ body {
 #mytext {
     font-size: 2rem;
 }
+
