@@ -1,4 +1,6 @@
-![Challenge Decodificador Oracle One T7](./assets/images/Decodificador%20de%20texto.png)
+<div style="width: auto;">
+    ![Challenge Decodificador Oracle One T7](./assets/images/Decodificador%20de%20texto.png)
+</div>
 
 ## Challenge Oracle One
 
