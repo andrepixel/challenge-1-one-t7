@@ -1,4 +1,4 @@
-<p style="align: center;">
+<p align="center">
     <img src="./assets/images/Decodificador%20de%20texto.png" alt="Challenge Decodificador Oracle One T7">
 </p>
 
