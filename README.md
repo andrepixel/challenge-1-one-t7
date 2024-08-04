@@ -1,6 +1,6 @@
-<div style="width: auto;">
-    ![Challenge Decodificador Oracle One T7](./assets/images/Decodificador%20de%20texto.png)
-</div>
+<p style="align: center;">
+    <img src="./assets/images/Decodificador%20de%20texto.png" alt="Challenge Decodificador Oracle One T7">
+</p>
 
 ## Challenge Oracle One
 
